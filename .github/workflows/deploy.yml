@@ -21,8 +21,8 @@ jobs:
         ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_INSTANCE_IP << 'EOF'
           cd cc-uts-frontend
           sudo git pull origin master
-          sudo npm install --force
-          sudo npm run build
+          npm install --force
+          npm run build
           pm2 delete nextjs
           pm2 start npm --name "nextjs" -- start
           pm2 save
