@@ -1,9 +1,10 @@
 
-import { Button } from "@/components/ui/button"
 import { ProductForm } from "@/components/product-form"
 import { getProductService } from "@/lib/product-service-provider"
 import BackButton from "@/components/back-button"
 import DeleteButton from "@/components/delete-button"
+
+export const dynamic = 'force-dynamic';
 
 export default async function UpdateProduct({ params }: { params: Promise<{ id: string }> }) {
   const id = (await params).id

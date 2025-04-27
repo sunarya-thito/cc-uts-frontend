@@ -3,6 +3,8 @@ import { ProductForm } from "@/components/product-form"
 import { getProductService } from "@/lib/product-service-provider"
 import BackButton from "@/components/back-button"
 
+export const dynamic = 'force-dynamic';
+
 export default function NewProduct() {
 
   const handleSubmit = async (formData: FormData) => {

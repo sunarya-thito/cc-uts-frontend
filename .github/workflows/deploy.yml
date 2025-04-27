@@ -19,7 +19,7 @@ jobs:
     - name: Deploy to ECS
       run: |
         ssh -o StrictHostKeyChecking=no $EC2_USER@$EC2_INSTANCE_IP << 'EOF'
-          cd latihan-uts-cloud-computing
+          cd cc-uts-frontend
           sudo git pull origin master
           sudo npm install --force
           sudo npm run build
